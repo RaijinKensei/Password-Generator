@@ -1,5 +1,5 @@
 import secrets
-import string  # fornisce costanti che possiamo definire come alfabeto
+import string 
 
 
 
@@ -14,16 +14,16 @@ class passwordGenerator:
         pwd = ''
 
         print("--- PASSWORD GENERATOR ---")
-        print("inserisci lunghezza della password: ")
+        print("Insert password length: ")
         pwd_length = int(input())
 
         for i in range(pwd_length):
             pwd += ''.join(secrets.choice(alphabet))
 
-        print("Password generata: ", pwd)
+        print("Password generated: ", pwd)
 
         with open(filename, "w") as f:
             f.write(f"password: {pwd}")
-            print("password salvata su file!")
+            print("password saved on file!")
 
 
